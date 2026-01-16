@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Persienner & Markiser - Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2a3a;
+            --accent: #d35400;
+            --light: #f4f7f6;
+            --text: #333;
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text); background: var(--light); line-height: 1.6; }
+        
+        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://www.mmpersienner.se/images/slider/slide1.jpg'); /* Link ka slici sa tvog starog sajta */
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .btn { background: var(--accent); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+
+        .section-title { text-align: center; margin-top: 50px; font-size: 1.8rem; color: var(--primary); }
+
+        /* Galerija slika */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MM Persienner</div>
+        <a href="tel:+460000000" style="color: var(--accent); text-decoration: none; font-weight: bold;"><i class="fas fa-phone"></i> Ring</a>
+    </header>
+
+    <section class="hero">
+        <h1>Kvalitetna zaštita od sunca</h1>
+        <p>Prilagođena rešenja za vaš dom i poslovni prostor.</p>
+        <a href="#kontakt" class="btn">Boka kostnadsfritt hembesök</a>
+    </section>
+
+    <h2 class="section-title">Våra Arbeten (Naši Radovi)</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://www.mmpersienner.se/images/galleri/1.jpg" alt="Persienner">
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.mmpersienner.se/images/galleri/2.jpg" alt="Markiser">
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.mmpersienner.se/images/galleri/3.jpg" alt="Rullgardiner">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MM Persienner & Markiser. Alla rättigheter förbehållna.</p>
+    </footer>
+
+</body>
+</html>
